@@ -46,27 +46,41 @@ function createHouseGeometry() {
     const roofVertices = new Float32Array( [
         // Roof vertices
         100, 0, 0,
+        85, 15, 0,
+        85, 50, 0,
+        70, 50, 0,
+        70, 30, 0,
         50, 50, 0,
         0, 0, 0,    
     ] );
 
     // Faces (indices of vertices)
     const roofIndices = [
-        0, 1, 2
+        0, 5, 6,
+        1, 2, 3,
+        1, 3, 4
     ];
 
     const baseVertices = new Float32Array( [
         // Base vertices
+        100, 100, 0,
         100, 0, 0,
+        75, 0, 0,
+        75, 50, 0,
+        25, 50, 0,
+        25, 0, 0,
         0, 0, 0,
-        0, 100, 0,
-        100, 100, 0
+        0, 100, 0
     ] );
 
     // Faces (indices of vertices)
     const baseIndices = [
-        2, 1, 0,
-        3, 2, 0
+        1, 3, 2,
+        1, 0, 3,
+        3, 0, 4,
+        4, 0, 7,
+        4, 7, 5,
+        5, 7, 6
     ];
 
     geometryRoof.setIndex( roofIndices );
@@ -75,7 +89,7 @@ function createHouseGeometry() {
     geometryBase.setAttribute( 'position', new THREE.BufferAttribute( baseVertices, 3 ) );
 
     return [
-        new THREE.Mesh( geometryRoof, new THREE.MeshBasicMaterial( { color: 0xff0000 } ) ).translateX(150).translateZ(100), 
-        new THREE.Mesh( geometryBase, new THREE.MeshBasicMaterial( { color: 0x0000ff } ) ).translateX(150)
+        new THREE.Mesh( geometryRoof, new THREE.MeshBasicMaterial( { color: 0xff0000 } ) ).translateX(150).translateZ(100),
+        new THREE.Mesh( geometryBase, new THREE.MeshBasicMaterial( { color: 0x0000ff } ) ).translateX(225).translateY(-75)
     ];
 }
