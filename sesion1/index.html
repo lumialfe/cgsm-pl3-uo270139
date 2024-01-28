@@ -22,7 +22,28 @@
         <div id="content">
             <h1>Memoria</h1>
             <h2>Descripción de la práctica</h2>
-                <p>Descripción breve del desarrollo de la práctica respondiendo a las cuestiones que se plantean en el guión.</p>
+                <p>Esta primera práctica de la asignatura Computación Gráfica y Servicios Multimedia es una introducción
+                    muy sencilla a WebGL, dónde aprenderemos a crear una escena, añadir cámaras y luces, y a introducir
+                    diferentes objetos con diferentes materiales en dicha escena. La mayor complicación proviene de apre
+                    nder esta tecnología nueva, pero gracias a un guión tan detallado la práctica transcurrió sin demasia
+                    das complicaciones.
+                    <br/>
+
+                    <p>
+                        <b>Preguntas</b>
+                        <br/>
+                        Dentro del apartado <i>3. Primeros pasos con WebGL</i> se nos pregunta, tras añadir el primer cubo
+                        a la escena, lo siguiente: Con esto, la escena ya estaría lista. Comprueba el resultado.
+                        ¿Es el que esperabas? ¿Se muestra el cubo correctamente? Asegúrate que entiendes por qué el cubo
+                        se ve de esa forma antes de continuar.
+
+                        <br/>
+                        Esta pregunta viene dada porque en el ejercicio se nos pide añadir un cubo, pero al visualizarlo
+                        lo que vemos es un cuadrado. Esto se debe a que la cámara está situada en el mismo eje que el
+                        cubo, por lo que no podemos verlo. Para solucionarlo, simplemente rotaremos el cubo (como se nos
+                        pide en el siguiente ejercicio).
+                    </p>
+                </p>
             <div id="exercises">
                 <h2>Ejercicio 1</h2>
                 <p>Primeros pasos con WebGL</p>
@@ -35,72 +56,74 @@
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li>Ninguna, salvo encontrar el método necesario.</li>
+                    <li>Averiguar que debía de linkear el script ya compilado.</li>
                 </ul>
 
                 <h2>Ejercicio 2</h2>
-                <p>Ejemplo de cómo incluir una escena.</p>
+                <p>Escena con un cubo con material básico</p>
                 <ol>
-                    <li>Desarrollar la escena en su propio fichero html+css+js.</li>
-                    <li>Incrustar el fichero html en este documento utilizando el objeto <span class="code">iframe</span> siguiente. Debe establecerse su propiedad <span class="code">src</span> apuntando al fichero html. Ten cuidado de adjuntar todos los ficheros necesarios.</li>
+                    <li>Crear una escena básica con cámara.</li>
+                    <li>Añadir un cubo con material básico.</li>
                 </ol>
                 <iframe class="container" src="prac1-2.html">
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li></li>
+                    <li>No conseguía acceder a la página porque no había añadido los nuevos archivo al apartado 'entry'.</li>
                 </ul>
 
                 <h2>Ejercicio 3</h2>
-                <p>Ejemplo de cómo incluir una escena.</p>
+                <p>Rotación del cubo.</p>
                 <ol>
-                    <li>Desarrollar la escena en su propio fichero html+css+js.</li>
-                    <li>Incrustar el fichero html en este documento utilizando el objeto <span class="code">iframe</span> siguiente. Debe establecerse su propiedad <span class="code">src</span> apuntando al fichero html. Ten cuidado de adjuntar todos los ficheros necesarios.</li>
+                    <li>Partiendo de la escena anterior, rotar el cubo.</li>
                 </ol>
                 <iframe class="container" src="prac1-3.html">
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li></li>
+                    <li>Ninguna</li>
                 </ul>
 
                 <h2>Ejercicio 4</h2>
-                <p>Ejemplo de cómo incluir una escena.</p>
+                <p>Objetos 3D.</p>
                 <ol>
-                    <li>Desarrollar la escena en su propio fichero html+css+js.</li>
-                    <li>Incrustar el fichero html en este documento utilizando el objeto <span class="code">iframe</span> siguiente. Debe establecerse su propiedad <span class="code">src</span> apuntando al fichero html. Ten cuidado de adjuntar todos los ficheros necesarios.</li>
+                    <li>Crear una escena base.</li>
+                    <li>Añadir un cubo rojo.</li>
+                    <li>Añadir un cilindro azul.</li>
+                    <li>Añadir una esfera verde.</li>
                 </ol>
                 <iframe class="container" src="prac1-4.html">
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li></li>
+                    <li>Ninguna</li>
                 </ul>
 
                 <h2>Ejercicio 5</h2>
-                <p>Ejemplo de cómo incluir una escena.</p>
+                <p>La casa de los horrores.</p>
                 <ol>
-                    <li>Desarrollar la escena en su propio fichero html+css+js.</li>
-                    <li>Incrustar el fichero html en este documento utilizando el objeto <span class="code">iframe</span> siguiente. Debe establecerse su propiedad <span class="code">src</span> apuntando al fichero html. Ten cuidado de adjuntar todos los ficheros necesarios.</li>
+                    <li>Partiendo de la escena anterior.</li>
+                    <li>Crear una geometría plana con forma de casa.</li>
                 </ol>
                 <iframe class="container" src="prac1-5.html">
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li></li>
+                    <li>Visualizar el polígono y la forma de unir sus caras. La solución fue dibujarlo en un papel.</li>
                 </ul>
 
                 <h2>Ejercicio 6</h2>
-                <p>Ejemplo de cómo incluir una escena.</p>
+                <p>Materiales.</p>
                 <ol>
-                    <li>Desarrollar la escena en su propio fichero html+css+js.</li>
-                    <li>Incrustar el fichero html en este documento utilizando el objeto <span class="code">iframe</span> siguiente. Debe establecerse su propiedad <span class="code">src</span> apuntando al fichero html. Ten cuidado de adjuntar todos los ficheros necesarios.</li>
+                    <li>Partiendo de la escena anterior.</li>
+                    <li>Añadir luces a la escena.</li>
+                    <li>Asignar tipos diferentes de materiales a los objetos.</li>
                 </ol>
                 <iframe class="container" src="prac1-6.html">
                 </iframe>
                 <h3>Dificultades encontradas</h3>
                 <ul>
-                    <li></li>
+                    <li>Ninguna</li>
                 </ul>
             </div>
         </div>

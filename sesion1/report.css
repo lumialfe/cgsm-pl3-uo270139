@@ -38,6 +38,10 @@ h2 {
     margin-top: 32px;
 }
 
+p {
+    padding: 16px 8px;
+}
+
 #exercises {
     padding: 25px;
 }
