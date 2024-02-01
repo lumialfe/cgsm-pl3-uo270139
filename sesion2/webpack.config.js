@@ -9,6 +9,7 @@ module.exports = {
         "prac2-6": "./src/prac2-6.js",
         "prac2-7": "./src/prac2-7.js",
         "prac2-8": "./src/prac2-8.js",
+        "prac2-9": "./src/prac2-9.js",
     },
     devtool: 'inline-source-map',
     devServer: {
