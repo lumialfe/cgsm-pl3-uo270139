@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>Informe de prácticas de CGSM (2015-2016)</title>
+        <title>Informe de prácticas de CGSM (2023-2024)</title>
         <link rel="stylesheet" type="text/css" href="report.css">
     </head>
     <body>
@@ -15,116 +15,169 @@
                 </tr>
                 <tr>
                     <th>Práctica:</th>
-                    <td>1</td> 
+                    <td>2: Introducción a WebGL (II)</td>
                 </tr>
             </table>
         </div>
         <div id="content">
             <h1>Memoria</h1>
             <h2>Descripción de la práctica</h2>
-                <p>Esta primera práctica de la asignatura Computación Gráfica y Servicios Multimedia es una introducción
-                    muy sencilla a WebGL, dónde aprenderemos a crear una escena, añadir cámaras y luces, y a introducir
-                    diferentes objetos con diferentes materiales en dicha escena. La mayor complicación proviene de apre
-                    nder esta tecnología nueva, pero gracias a un guión tan detallado la práctica transcurrió sin demasia
-                    das complicaciones.
-                    <br/>
-
-                    <p>
-                        <b>Preguntas</b>
-                        <br/>
-                        Dentro del apartado <i>3. Primeros pasos con WebGL</i> se nos pregunta, tras añadir el primer cubo
-                        a la escena, lo siguiente: Con esto, la escena ya estaría lista. Comprueba el resultado.
-                        ¿Es el que esperabas? ¿Se muestra el cubo correctamente? Asegúrate que entiendes por qué el cubo
-                        se ve de esa forma antes de continuar.
-
-                        <br/>
-                        Esta pregunta viene dada porque en el ejercicio se nos pide añadir un cubo, pero al visualizarlo
-                        lo que vemos es un cuadrado. Esto se debe a que la cámara está situada en el mismo eje que el
-                        cubo, por lo que no podemos verlo. Para solucionarlo, simplemente rotaremos el cubo (como se nos
-                        pide en el siguiente ejercicio).
-                    </p>
+                <p>Esta segunda práctica de la asignatura Computación Gráfica y Servicios Multimedia es la continuación
+                    a la introducción a WebGL, dónde trabajaremos de nuevo con objetos 3D, pero esta vez añadiendo
+                    materiales y luces mejor pensadas a la escena. Además, comenzaremos a animar los objetos 3D, para
+                    que se muevan por la escena. Crearemos shaders básicos para alguno de los materiales y, por último,
+                    importaremos modelos 3D para incluirlos en la escena. Para ello, se nos pide que creemos una maqueta
+                    "a escala" del planeta Tierra, la Luna, el Sol y la Estación Espacial Internacional (ISS).
                 </p>
+            <hr/>
             <div id="exercises">
-                <h2>Ejercicio 1</h2>
-                <p>Primeros pasos con WebGL</p>
-                <ol>
-                    <li>Crear estructura de archivos base.</li>
-                    <li>Crear un script simple que determine si WebGL está activado o no en el navegador.</li>
-                    <li>Mostrar el resultado en pantalla.</li>
-                </ol>
-                <iframe class="container" src="prac1-1.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>Averiguar que debía de linkear el script ya compilado.</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 1: Texturas</h2>
+                    <ol>
+                        <li>Partiendo del cubo de la sesión 1.3</li>
+                        <li>Añadimos una textura sencilla que se replica por cada una de sus caras</li>
+                    </ol>
+                    <iframe class="container" src="prac2-1.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Ninguna</li>
+                    </ul>
+                </div>
 
-                <h2>Ejercicio 2</h2>
-                <p>Escena con un cubo con material básico</p>
-                <ol>
-                    <li>Crear una escena básica con cámara.</li>
-                    <li>Añadir un cubo con material básico.</li>
-                </ol>
-                <iframe class="container" src="prac1-2.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>No conseguía acceder a la página porque no había añadido los nuevos archivo al apartado 'entry'.</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 2: Primer Planeta Tierra</h2>
+                    <ol>
+                        <li>Crear una escena con una Point Light lejana.</li>
+                        <li>Añadir una esfera y aplicarle una textura.</li>
+                    </ol>
+                    <iframe class="container" src="prac2-2.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>
+                            Comprender el funcionamiento de los parámetros de la PointLight. Solucionado preguntando al
+                            profesor y leyendo la documentación.
+                        </li>
+                    </ul>
+                </div>
 
-                <h2>Ejercicio 3</h2>
-                <p>Rotación del cubo.</p>
-                <ol>
-                    <li>Partiendo de la escena anterior, rotar el cubo.</li>
-                </ol>
-                <iframe class="container" src="prac1-3.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>Ninguna</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 3: La Tierra y su Atmósfera</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Añadir una escena concéntrica a la anterior ligeramente mayor</li>
+                        <li>Aplicarle una textura transparente</li>
+                    </ol>
+                    <iframe class="container" src="prac2-3.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Ninguna</li>
+                    </ul>
+                </div>
 
-                <h2>Ejercicio 4</h2>
-                <p>Objetos 3D.</p>
-                <ol>
-                    <li>Crear una escena base.</li>
-                    <li>Añadir un cubo rojo.</li>
-                    <li>Añadir un cilindro azul.</li>
-                    <li>Añadir una esfera verde.</li>
-                </ol>
-                <iframe class="container" src="prac1-4.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>Ninguna</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 4: Rotación de la Tierra</h2>
+                    <ol>
+                        <li>A partir de la escena anterior</li>
+                        <li>Crear un grupo con ambas esferas</li>
+                        <li>Aplicar una rotación de 0.36 radianes en el eje de las Zs</li>
+                    </ol>
+                    <iframe class="container" src="prac2-4.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Ninguna</li>
+                    </ul>
+                </div>
 
-                <h2>Ejercicio 5</h2>
-                <p>La casa de los horrores.</p>
-                <ol>
-                    <li>Partiendo de la escena anterior.</li>
-                    <li>Crear una geometría plana con forma de casa.</li>
-                </ol>
-                <iframe class="container" src="prac1-5.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>Visualizar el polígono y la forma de unir sus caras. La solución fue dibujarlo en un papel.</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 5: Añadiendo la Luna</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Añadir una nueva esfera y aplicarle la textura de la Luna</li>
+                    </ol>
+                    <iframe class="container" src="prac2-5.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Ninguna</li>
+                    </ul>
+                </div>
 
-                <h2>Ejercicio 6</h2>
-                <p>Materiales.</p>
-                <ol>
-                    <li>Partiendo de la escena anterior.</li>
-                    <li>Añadir luces a la escena.</li>
-                    <li>Asignar tipos diferentes de materiales a los objetos.</li>
-                </ol>
-                <iframe class="container" src="prac1-6.html">
-                </iframe>
-                <h3>Dificultades encontradas</h3>
-                <ul>
-                    <li>Ninguna</li>
-                </ul>
+                <div class="exercise">
+                    <h2>Ejercicio 6: Rotación de la Tierra</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Animar las esferas de la tierra y atmósfera para que giren sobre sí mismas</li>
+                    </ol>
+                    <iframe class="container" src="prac2-6.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>
+                            Comprender el cálculo de la rotación en el fragmento de código proporcionado por el porfesor. Una
+                            rápida búsqueda en internet para refrescar mis conocimientos de geometría me llevó a la solución.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 7: Rotación de la Luna</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Animar la Luna para que gire alrededor de la tierra</li>
+                        <li>Animar la Luna para que gire sobre si misma</li>
+                    </ol>
+                    <iframe class="container" src="prac2-7.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Comprender como funcionan las rotaciones de grupos. Mediante ensayo y error conseguí entenderlo.</li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 8: Shaders</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Añadir una nueva esfera: el Sol</li>
+                        <li>Crear dos shaders propios para el objeto y aplicarselos</li>
+                        <li>Animar las texturas del Sol</li>
+                        <li><b>Trabajo Extra: </b> Animar la rotación del Sol</li>
+                        <li><b>Trabajo Extra: </b> Animar la rotación de la Tierra alrededor del Sol</li>
+                    </ol>
+                    <iframe class="container" src="prac2-8.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>
+                            Conseguir posicionar la cámara de manera que se viera todo correctamente. La
+                            solución, de nuevo, fue mediante ensayo y error.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 9: ¡La ISS!</h2>
+                    <ol>
+                        <li>Partiendo de la escena anterior</li>
+                        <li>Cargar un modelo de la Estación Espacial Internacional</li>
+                        <li>Añadirlo a la escena</li>
+                        <li><b>Trabajo Extra: </b> Animar la rotación de la ISS alrededor de la Tierra</li>
+                    </ol>
+                    <iframe class="container" src="prac2-9.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>
+                            Conseguir entender las funciones callback y el flujo de ejecución para poder añadir el objeto a
+                            uno de los grupos ya creados. De nuevo, ensayo y error tocando y cambiando partes del código
+                            hast conseguir el resultado deseado.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </body>

@@ -1,5 +1,8 @@
 body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
+    width: 80%;
+    margin: 32px auto;
+    text-align: justify;
 }
 
 table #general {
@@ -22,12 +25,11 @@ tr {
 
 .container {
     min-height: 500px;
-    width: 100%;
+    width: 98%;
+    padding: 1%;
     background-color: black;
-    border-top: #c00 1px dotted;
-    border-right: #c00 2px dotted;
-    border-left: #c00 2px dotted;
-    border-bottom: #c00 4px dotted;
+    border: none;
+    border-radius: 12px;
 }
 
 .code {
@@ -43,5 +45,13 @@ p {
 }
 
 #exercises {
-    padding: 25px;
+    //padding: 25px;
+}
+
+.exercise {
+    border-bottom: 2px solid lightgrey;
+}
+
+hr {
+    border: 2px solid lightgrey;
 }
