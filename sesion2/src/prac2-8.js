@@ -15,7 +15,9 @@ if ( WEBGL.isWebGLAvailable() ) {
     document.getElementById('webGL-check').innerText = 'WebGL is NOT available!';
     document.getElementById('webGL-check').classList = 'webGl-check webGL-not-available';
 }
-const CAMERA_POSITION = [0, 0, 1500]
+const ORIGIN = [0, 0, 0]
+const CAMERA_POSITION = [0, 550, 2000]
+const CAMERA_ROTATION = [-0.2908, 0, 0]
 
 const SCALE = 100;
 const EARTH_RADIUS = 6371 / SCALE;
@@ -23,7 +25,7 @@ const ATMOSPHERE_RADIUS = 6421 / SCALE;
 const MOON_RADIUS = 1737.4 / SCALE;
 // const SUN_RADIUS = 696340 / SCALE;
 const SUN_RADIUS = EARTH_RADIUS * 2;
-const SUN_POSITION = [900, 0, 500];
+const SUN_POSITION = ORIGIN;
 
 const clock = new THREE.Clock( );
 
@@ -42,14 +44,20 @@ function animate( ) {
     moonGroup.rotation.y += moonRotation;
 
     // SUN ANIMATION
+    const sunRotation = ( delta * Math.PI * 2 ) / 638.4;
+    sun.rotation.y += sunRotation;
     uniforms[ "time" ].value += 0.2 * delta;
+
+    // EARTH REVOLUTION
+    const earthRevolution = (( delta * Math.PI * 2 ) / (365 * 24)) * 100; //Sped up 100 times
+    earthMoonGroup.rotation.y += earthRevolution;
 
     // Render the scene
     renderer.render( scene, camera );
 
     // Request the browser to execute the animation-rendering loop
     requestAnimationFrame( animate );
-};
+}
 
 const scene = new THREE.Scene();
 
@@ -59,8 +67,7 @@ document.body.appendChild( renderer.domElement );
 
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.set( ...CAMERA_POSITION );
-// camera.position.set( 0, 200, 800 );
-// camera.rotation.set( -0.274, 0, 0 );
+camera.rotation.set( ...CAMERA_ROTATION );
 
 //LIGHT
 const pointLight = new THREE.PointLight( 0xFFFFFF, 10, 5000, 0 );
@@ -108,6 +115,14 @@ moonGroup.add( moon );
 // The Moon orbit is a bit tilted
 moonGroup.rotation.x = 0.089;
 
+// EARTH AND MOON GROUPING
+const earthMoonGroup = new THREE.Object3D();
+earthAtmosphereGroup.position.set( 900, 0, 500 );
+moonGroup.position.set( 900, 0, 500 );
+earthMoonGroup.add( earthAtmosphereGroup );
+earthMoonGroup.add( moonGroup );
+// earthMoonGroup.position.set( 900, 0, 500  );
+
 //SUN
 const NOISEMAP = '../textures/cloud.png';
 const SUNMAP = '../textures/lavatile.jpg';
@@ -137,7 +152,7 @@ map = textureLoader.load( mapUrl, ( ) => { renderer.render( scene, camera ); } )
 const sun = new THREE.Mesh( geometry, material );
 sun.position.set( ...SUN_POSITION );
 
-scene.add( earthAtmosphereGroup, moonGroup, sun );
+scene.add( earthMoonGroup, sun );
 renderer.render( scene, camera );
 
 animate();
