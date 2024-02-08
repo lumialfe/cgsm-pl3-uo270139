@@ -26,6 +26,7 @@ function animate( ) {
 
     // Update the controls
     controls.update( delta );
+    stats.update( );
 
     // Render the scene
     renderer.render( scene, camera );
@@ -41,11 +42,12 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 0, 20, 0 );
+camera.position.set( 500, 40, 0 );
+camera.lookAt( 0, 40, 0 );
 
 // LIGHTS
-let light = new THREE.DirectionalLight( 0xffffff, 2 );
-light.position.set(0, 0.5, 100);
+let light = new THREE.DirectionalLight( 0xffffff, 5.0 );
+light.position.set( 50, 100, 0 );
 scene.add( light );
 
 light = new THREE.AmbientLight( 0x808080 ); // soft white light
@@ -111,8 +113,8 @@ document.body.appendChild( stats.domElement );
 
 // CONTROLS
 const controls = new FirstPersonControls( camera, renderer.domElement );
-controls.movementSpeed = 70;
-controls.lookSpeed = 0.1;
+controls.movementSpeed = 100;
+controls.lookSpeed = 0.05;
 controls.noFly = false;
 controls.lookVertical = false;
 

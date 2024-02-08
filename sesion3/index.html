@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2023-2024)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Luis Miguel Alonso Ferreiro</td>
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>3: WebGL Avanzado (I)</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>Esta tercera práctica de la asignatura Computación Gráfica y Servicios Multimedia es la primera
+                    parte del contenido avanzado de WebGL. En ella se han realizado ejercicios con texturas complejas,
+                    añadiendo mapas de altura a las mismas, o utilizando texturas de vídeo. Además, se ha trabajado con
+                    controles gráficos para modificar la escena en tiempo real, como sliders para modificar la altura
+                    de los mapas de altura, o overlays que muestran información adicional sobre la escena como los FPS.
+                    Por último, se ha creado una escena con cámara en primera persona que permite al usuario moverse por
+                    la misma y se han añadido dos cubos cuyas texturas varían segun la cara.
+                </p>
+            <hr/>
+            <div id="exercises">
+                <div class="exercise">
+                    <h2>Ejercicio 1: Texturas</h2>
+                    <ol>
+                        <li>Partiendo del cubo de la sesión 1.3</li>
+                        <li>Creamos un material con dos texturas: una de color y un mapa de altura</li>
+                        <li>Y animamos el cubo para apreciar la diferencia</li>
+                    </ol>
+                    <iframe class="container" src="prac3-1.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Encontrar una buena iluminación para resalzar los detalles. Prueba y error fue la solución.</li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 2: Texturas de Vídeo</h2>
+                    <ol>
+                        <li>Partiendo de un par de archivos de video descargados</li>
+                        <li>Creamos una etiqueta video en html enlazada a estos archivos</li>
+                        <li>Y utlizamos la reproducción de dicho vídeo como textura en un plano animado</li>
+                    </ol>
+                    <iframe class="container" src="prac3-2.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>La mayor dificultad fue animar el vídeo para que se viera la cara visible todo el rato. Como no se fue capaz, se decidió aplicar la textura a ambas caras del plano.</li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 3: Controlando variables de la escena</h2>
+                    <ol>
+                        <li>Partiendo del cubo de la sesión 3.1</li>
+                        <li>Añadimos un overlay en la interfaz que permite controlar la intensidad del mapa de altura de la textura aplicada al objeto</li>
+                        <li>Y un overlay que muestra los fotogramas por segundo de la escena</li>
+                    </ol>
+                    <iframe class="container" src="prac3-3.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Comprender los fragmentos de código del guión y entender dónde va cada cosa y por qué. La solución fue ir probando diferentes combinaciones hasta que por fin funcionó.</li>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h2>Ejercicio 4: Movimiento de la cámara</h2>
+                    <ol>
+                        <li>Partiendo de una escena en blanco</li>
+                        <li>Añadimos una rejilla a modo de suelo</li>
+                        <li>Añadimos una funcionalidad que permite controlar la cámara por la escena en primera persona</li>
+                        <li>Añadimos dos cubos con diferentes texturas por cara</li>
+                    </ol>
+                    <iframe class="container" src="prac3-4.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>Hacerse a los controles de la cámara llevó tiempo y paciencia</li>
+                        <li>Saber que cara era a la que se estaba aplicando la textura diferente. Prueba y error fue la solución a este problema</li>
+                        <li>Encontrar una buena iluminación para que la escena se visualizase de manera correcta. De nuevo, prueba y error</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

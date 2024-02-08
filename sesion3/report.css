@@ -1,0 +1,53 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    width: 80%;
+    margin: 32px auto;
+    text-align: justify;
+}
+
+table #general {
+    font-family: "Helvetica Neue", Helvetica, sans-serif
+}
+
+th {
+    background: SteelBlue;
+    color: white;
+}
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+tr {
+    background: WhiteSmoke;
+}
+
+.container {
+    min-height: 500px;
+    width: 98%;
+    padding: 1%;
+    background-color: black;
+    border: none;
+    border-radius: 12px;
+}
+
+.code {
+    font-style: italic;
+}
+
+h2 {
+    margin-top: 32px;
+}
+
+p {
+    padding: 16px 8px;
+}
+
+.exercise {
+    border-bottom: 2px solid lightgrey;
+}
+
+hr {
+    border: 2px solid lightgrey;
+}
