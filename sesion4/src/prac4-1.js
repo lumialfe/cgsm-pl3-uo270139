@@ -27,6 +27,9 @@ function animate( ) {
     // Update the controls
     controls.update( delta );
 
+    // Update the stats
+    stats.update( );
+
     // Render the scene
     renderer.render( scene, camera );
 
@@ -40,12 +43,16 @@ const renderer = new THREE.WebGLRenderer( {antialias: true} );
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+// CAMERA
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.set( 0, 20, 0 );
 
+const listener = new THREE.AudioListener();
+camera.add( listener );
+
 // LIGHTS
-let light = new THREE.DirectionalLight( 0xffffff, 2 );
-light.position.set(0, 0.5, 100);
+let light = new THREE.PointLight( 0xffffff, 2, 0, 0 );
+light.position.set(0, 25, 0);
 scene.add( light );
 
 light = new THREE.AmbientLight( 0x808080 ); // soft white light
@@ -102,6 +109,28 @@ scene.add( box_1 );
 const box_2 = new THREE.Mesh( geometry, materials_2 );
 box_2.position.set( 0, 25, -300 );
 scene.add( box_2 );
+
+// AUDIO
+const audioLoader = new THREE.AudioLoader();
+const sound_1 = new THREE.PositionalAudio( listener );
+audioLoader.load( './audio/376737_Skullbeatz___Bad_Cat_Maste.ogg', ( buffer ) => {
+    sound_1.setBuffer( buffer );
+    sound_1.setRefDistance( 20 );
+    sound_1.setLoop( true );
+    sound_1.setRolloffFactor( 1 );
+    sound_1.play(); // Modern browsers do not allow sound to start without user interaction
+});
+box_1.add( sound_1 );
+
+const sound_2 = new THREE.PositionalAudio( listener );
+audioLoader.load( './audio/dog.ogg', ( buffer ) => {
+    sound_2.setBuffer( buffer );
+    sound_2.setRefDistance( 20 );
+    sound_2.setLoop( true );
+    sound_2.setRolloffFactor( 1 );
+    sound_2.play(); // Modern browsers do not allow sound to start without user interaction
+});
+box_2.add( sound_2 );
 
 // STATS
 const stats = new Stats( );
