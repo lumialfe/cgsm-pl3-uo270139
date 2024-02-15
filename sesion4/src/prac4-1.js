@@ -26,6 +26,7 @@ function animate( ) {
 
     // Update the controls
     controls.update( delta );
+    stats.update( );
 
     // Update the stats
     stats.update( );
@@ -45,7 +46,8 @@ document.body.appendChild( renderer.domElement );
 
 // CAMERA
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 0, 20, 0 );
+camera.position.set( 500, 40, 0 );
+camera.lookAt( 0, 40, 0 );
 
 const listener = new THREE.AudioListener();
 camera.add( listener );
@@ -140,8 +142,8 @@ document.body.appendChild( stats.domElement );
 
 // CONTROLS
 const controls = new FirstPersonControls( camera, renderer.domElement );
-controls.movementSpeed = 70;
-controls.lookSpeed = 0.1;
+controls.movementSpeed = 100;
+controls.lookSpeed = 0.05;
 controls.noFly = false;
 controls.lookVertical = false;
 
