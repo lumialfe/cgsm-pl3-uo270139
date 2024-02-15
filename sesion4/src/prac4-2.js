@@ -26,11 +26,12 @@ function animate( ) {
 
     // Update the controls
     controls.update( delta );
+    stats.update( );
 
     // Update the stats
     stats.update( );
 
-    // Update the raycaster
+    // RAY CASTING
     rayCaster.setFromCamera( mouse, camera );
 
     // Look for all the intersected objects
@@ -63,7 +64,8 @@ document.body.appendChild( renderer.domElement );
 
 // CAMERA
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 0, 20, 0 );
+camera.position.set( 500, 40, 0 );
+camera.lookAt( 0, 40, 0 );
 
 const listener = new THREE.AudioListener();
 camera.add( listener );
@@ -73,13 +75,13 @@ let light = new THREE.PointLight( 0xffffff, 2, 0, 0 );
 light.position.set(0, 25, 0);
 scene.add( light );
 
-light = new THREE.PointLight( 0x808080 ); // soft white light
+light = new THREE.AmbientLight( 0x808080 ); // soft white light
 scene.add( light );
 
 // FLOOR
 const helper = new THREE.GridHelper( 800, 40, 0x444444, 0x444444 );
+helper.name = 'Floor';
 helper.position.y = 0.1;
-helper.name = "Floor";
 
 const geometry = new THREE.BoxGeometry( 50, 50, 50 );
 
@@ -123,12 +125,12 @@ const materials_2 = [
 
 const box_1 = new THREE.Mesh( geometry, materials_1 );
 box_1.position.set( 0, 25, 300 );
-box_1.name = "Music Box"
+box_1.name = 'Music Box'
 scene.add( box_1 );
 
 const box_2 = new THREE.Mesh( geometry, materials_2 );
 box_2.position.set( 0, 25, -300 );
-box_2.name = "Dog Cage"
+box_2.name = 'Dog Cage'
 scene.add( box_2 );
 
 // AUDIO
@@ -161,12 +163,12 @@ document.body.appendChild( stats.domElement );
 
 // CONTROLS
 const controls = new FirstPersonControls( camera, renderer.domElement );
-controls.movementSpeed = 70;
-controls.lookSpeed = 0.1;
+controls.movementSpeed = 100;
+controls.lookSpeed = 0.05;
 controls.noFly = false;
 controls.lookVertical = false;
 
-// OBJECT SELECTION
+// RAY CASTING
 const rayCaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 let intersectedObject = null;
@@ -175,7 +177,6 @@ document.body.addEventListener( 'mousemove', ( event ) => {
     mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
     mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 }, false );
-
 
 scene.add( helper );
 renderer.render( scene, camera );
