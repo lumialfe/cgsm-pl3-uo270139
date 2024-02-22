@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2023-2024)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Luis Miguel Alonso Ferreiro</td>
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>5: Distribución de medios continuos</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                    Esta es la primera práctica del apartado de multimeda de la asignatura. En ella aprendermos los básicos de MPEG-DASH y utilizaremos una máquina virtual para
+                    servir contenido multimedia a través de un servidor web.
+                </p>
+            <hr/>
+            <div id="exercises">
+                <div class="exercise">
+                    <h2>Ejercicio 1: Introducción a MPEG-DASH</h2>
+                    <h3>Cuestiones</h3>
+                    <h4>Manifesto 1: MultiResMPEG2</h4>
+                    <ol>
+                        <li><b>¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes de la red?</b></li>
+                        <ul>
+                            <li>Sólo una: mp4a.40.29.</li>
+                        </ul>
+                        <li><b>¿Y de vídeo?</b></li>
+                        <ul>
+                            <li>De nuevo, sólo una: avc1.4d401f.</li>
+                        </ul>
+                        <li><b>¿Cuántas resoluciones de vídeo distintas puede usar el cliente? Indica cuáles.</b></li>
+                        <ul>
+                            <li>En este caso, tres: 512x288, 768x432 y 1280x720.</li>
+                        </ul>
+                    </ol>
+                    <h4>Manifesto 2: SNE_DASH_SD_CASE1A_REVISED</h4>
+                    <ol>
+                        <li><b>¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes de la red?</b></li>
+                        <ul>
+                            <li>Solo una: mp4a.40.5.</li>
+                        </ul>
+                        <li><b>¿Y de vídeo?</b></li>
+                        <ul>
+                            <li>Una: avc1.4D401E.</li>
+                        </ul>
+                        <li><b>¿Cuántas resoluciones de vídeo distintas puede usar el cliente? Indica cuáles.</b></li>
+                        <ul>
+                            <li>Una: 480x854 con 4 anchos de banda (1005568, 1609728, 704512 y 452608)</li>
+                        </ul>
+                    </ol>
+                    <!-- <iframe class="container" src="prac4-1.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
