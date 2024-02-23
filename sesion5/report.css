@@ -24,10 +24,11 @@ tr {
     min-height: 500px;
     width: 100%;
     background-color: black;
-    border-top: #c00 1px dotted;
-    border-right: #c00 2px dotted;
-    border-left: #c00 2px dotted;
-    border-bottom: #c00 4px dotted;
+    border: none;
+}
+
+.video {
+    min-height: 1080px;
 }
 
 .code {
