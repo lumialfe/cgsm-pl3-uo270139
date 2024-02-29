@@ -1,0 +1,48 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+table #general {
+    font-family: "Helvetica Neue", Helvetica, sans-serif
+}
+
+th {
+    background: SteelBlue;
+    color: white;
+}
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+tr {
+    background: WhiteSmoke;
+}
+
+.container {
+    min-height: 700px;
+    width: 100%;
+    background-color: black;
+    border: none;
+}
+
+.video {
+    min-height: 640px;
+}
+
+.code {
+    font-style: italic;
+}
+
+h2 {
+    margin-top: 32px;
+}
+
+p {
+    padding: 16px 8px;
+}
+
+#exercises {
+    padding: 25px;
+}

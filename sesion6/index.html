@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2023-2024)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Luis Miguel Alonso Ferreiro</td>
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>6: Comunicaciones en tiempo real con WebRTC</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                    Esta es la segunda práctica del apartado de multimeda de la asignatura. En ella aprendermos los básicos de WebRTC para capturar video en tiempo real y simular Comunicaciones
+                    RTC en nuestro propio navegador.
+                    WebRTC es una tecnlogía de código abierto muy extendida que usan aplicaciones tan populares como Microsoft Teams, Skype, Slack, y Google Meet.
+            <hr/>
+            <div id="exercises">
+                <div class="exercise">
+                        <h2>Ejercicio 1: Aplicación WebRTC básica</h2>
+                        <p>
+                            El primer ejercicio consisitió en realizar la configuración inicial de WebRTC para capturar video a través de la cámara web del ordenador y mostrarlo al usuario por pantalla.
+                        </p>
+                        <iframe class="container video" src="prac6-1.html">
+                        </iframe>
+                        <h3>Dificultades encontradas</h3>
+                        <ul>
+                            <li>
+                                Ninguna.
+                            </li>
+                        </ul>
+                </div>
+                <div class="exercise">
+                    <h2>Ejercicio 2: Captura de la Transmisión</h2>
+                    <p>
+                        Partiendo del ejercicio anterior, añadimos la opción de capturar una instantánea del video en tiempo real que estamos repoduciendo y guardarla al ordenador.
+                        Para ello, añadimos un canvas oculto y un enlace en el que pulsar y, mediante la función drawImage() del canvas, guardamos la instantánea en esta y luego la descargamos.
+                    </p>
+                    <iframe class="container video" src="prac6-2.html">
+                    </iframe>
+                    <h3>Dificultades encontradas</h3>
+                    <ul>
+                        <li>
+                            La mayor dificultad a partir de este punto es comprender como funciona el código que estamos utilizando. La solución: echar el tiempo suficiente para entenderlo.
+                        </li>
+                    </ul>
+            </div>
+            <div class="exercise">
+                <h2>Ejercicio 3: Llamadas con WebRTC</h2>
+                <p>
+                    Este ejercicio fue el más completo (y complicado) de todos. En él, creamos una aplicación que permite simular llamadas entre dos usuarios (que en realidad son el mismo navegegador) a través de WebRTC.
+                    Para ello, y partiendo de una gran cantidad de código proporcionada por el enunciado, implementamos las funciones start(), call() y hangup() para iniciar, realizar y finalizar la llamada, respectivamente.
+                </p>
+                <iframe class="container video" src="prac6-3.html">
+                </iframe>
+                <h3>Dificultades encontradas</h3>
+                <ul>
+                    <li>
+                        La mayor dificultad, como adelantamos en el ejercicio anterior, fue comprender el código proporcionado. Creo que esto tiene que ver en gran parte por el copiar y pegar que, aunque todos sabemos que es una mala práctica, 
+                        a veces caemos en la tentación debido a la falta de tiempo. Al final, no obstante, tuve que parar y entender el código para poder implementar las funciones necesarias, así que esa fue la solución.
+                    </li>
+                </ul>
+        </div>
+        <div class="exercise">
+            <h2>Ejercicio 4: Integración de WebRTC con WebGL</h2>
+            <p>
+                Partiendo del ejercicio prac3-2.html dónde aplicabamos una textura de video a un plano animado, en este ejercicio lo que hicimos fue aplicar la textura de video que capturamos de la webcam en tiempo real a ese mismo plano.
+            </p>
+            <iframe class="container video" src="prac6-4.html">
+            </iframe>
+            <h3>Dificultades encontradas</h3>
+            <ul>
+                <li>
+                    Ninguna.
+                </li>
+            </ul>
+    </div>
+            </div>
+        </div>
+    </body>
+</html>

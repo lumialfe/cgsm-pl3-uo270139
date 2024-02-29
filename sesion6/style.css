@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: monospace;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: rgb(207, 0, 52);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.play-button:hover {
+    background-color: rgb(255, 0, 64);
+    box-shadow: 0 0 15px 0 rgb(255, 0, 64);
+    cursor: pointer;
+}
+
+.play-button:active {
+    background-color: rgb(207, 0, 52);
+}
+
+.play-button svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+
+div#container {
+    margin: 0 auto 0 auto;
+    max-width: 40em;
+    padding: 1em 1.5em 1.3em 1.5em;
+}
+
+video {
+    background: #222;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#capture {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 1em;
+    word-break: break-word;
+    height: 100%;
+    background-color: #f13621;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+
+#capture:hover {
+    background-color: rgb(177, 53, 39);
+}
